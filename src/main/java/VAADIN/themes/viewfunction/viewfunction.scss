@@ -1,0 +1,111 @@
+/* This only allows us to use the mixins defined in it and does not add any styles by itself. */
+
+/* This contains all of your theme. */
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin viewfunction {
+  /* Include all the styles from the valo theme */
+  @include valo;
+  /* Insert your theme rules here */
+
+  $color1: hsl(220, 5%, 38%);
+  $color2: #5d73c0;
+  $color3: #3dbc1a;
+  $color4: #d2f4f3;
+  $color5: #fe902a;
+
+
+
+  /* Global parameter definition */
+  $GlobalStyle_DeepDarkColor: #222222;
+  $GlobalStyle_lightDarkColor:hsl(220, 5%, 38%);
+  $GlobalStyle_fadeDarkColor:#888888;
+  $GlobalStyle_DeepBrightColor: #FFFFFF;
+  $GlobalStyle_lightBrightColor: #F8F8F8;
+
+  /* application UI element styles */
+  .ui_appBanner{
+    background-color:$GlobalStyle_DeepBrightColor ;
+    border: 0px solid;
+    border-bottom: 5px solid $GlobalStyle_lightDarkColor;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .ui_appTitle{
+    color: $GlobalStyle_DeepDarkColor;
+    font-weight: bolder;
+    padding-top: 5px;
+  }
+  .ui_appLightDarkMessage{
+    color: $GlobalStyle_fadeDarkColor;
+  }
+  .ui_appDeepDarkMessage{
+    color: $GlobalStyle_lightDarkColor;
+  }
+  .ui_compElementStatusBar{
+    background-color:$GlobalStyle_lightBrightColor;
+    padding-left: 15px;
+    padding-top: 3px;
+  }
+  .ui_compElementStatusBarLink{
+    padding-bottom: 30px;
+  }
+  .ui_appSubViewContainer{
+    padding-left: 20px;
+  }
+  .ui_appSectionDiv{
+    padding-bottom: 12px;
+    border: 0px solid;
+    border-bottom: 1px solid #EEEEEE;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .ui_appSectionFadeDiv{
+    border: 0px solid;
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .ui_appElementDiv{
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    border: 0px solid;
+    border-bottom: 1px solid #EEEEEE;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .ui_appFadeMargin{
+    margin-bottom: 0.5em;
+  }
+  .ui_appActionsBar{
+    color: $GlobalStyle_lightDarkColor;
+    background-color:$GlobalStyle_lightBrightColor;
+    padding-left: 15px;
+    padding-top: 3px;
+    margin-bottom:10px ;
+  }
+  .ui_appElementTag{
+    color: $GlobalStyle_lightDarkColor;
+    background-color:$GlobalStyle_lightBrightColor;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom:10px ;
+    margin-left:10px ;
+  }
+  .ui_appElementMiddleMargin{
+    margin-top:10px ;
+    margin-bottom:20px ;
+  }
+
+  /* CSS hack to override original theme style */
+  .v-margin-left {
+    padding-left: 10px;
+  }
+  .v-margin-bottom {
+    padding-bottom: 10px;
+  }
+  .v-margin-right {
+    padding-right: 10px;
+  }
+  .v-margin-top {
+    padding-top: 10px;
+  }
+  .v-tabsheet-tabitemcell .v-tabsheet-tabitem-selected .v-caption.v-caption{
+    color:$GlobalStyle_DeepDarkColor;
+  }
+}
