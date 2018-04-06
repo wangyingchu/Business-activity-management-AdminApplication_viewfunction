@@ -1,5 +1,6 @@
 package com.viewfunction.businessActivityManagementAdminApplication;
 
+import com.viewfunction.businessActivityManagementAdminApplication.util.ApplicationLauncherUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -12,6 +13,7 @@ public class BusinessActivityManagementAdminApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BusinessActivityManagementAdminApplication.class, args);
+		ApplicationLauncherUtil.printApplicationConsoleBanner();
 	}
 
 	@Bean
